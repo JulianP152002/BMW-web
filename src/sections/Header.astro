@@ -1,0 +1,166 @@
+---
+
+---
+
+<section class="container_primary">
+    <div class="primary_content">
+        <div class="content_left">
+            <h1 class="content-left_title">LOS MEJORES VEHICULOS <br>DEL MUNDO</h1>
+            <p class="content-left_description">Tenemos para ti los mejores vehiculos del mercado</p>
+            <button class="content-left_button">
+                <a href="">Conocenos</a>
+            </button>
+        </div>
+
+        <div class="content_right">
+            <div class="content-right_horario">
+                <h3 class="horario_title">Open</h3>
+                <p class="horario_days">Lun-Sab <span class="horario_hour horario_hour-1">08:00AM-07:00PM</span></p>
+                <p class="horario_days">Domin-Fest<span class="horario_hour horario_hour-close">CERRADO</span></p>
+            </div>
+            <img class="content-right_img" src="/src/icons/imgs/M440i Coupe 2024.png" alt="imagen vehiculo">
+        </div>
+
+    </div>
+</section>
+
+<style>
+.container_primary{
+    width: 100%;
+    height: 50rem;
+    background-image: url(/src/icons/imgs/Diseño\ sin\ título_20240103_133148_0000.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5rem;
+}
+
+.primary_content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-left_description{
+    margin-top: 2rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: start;
+}
+
+.content_left{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    margin-left: 8rem;
+    color: #fff;
+}
+
+.content-left_button{
+    margin-top: 2rem;
+    width: 20rem;
+    padding: 1rem 0.8rem;
+    border-radius: 10px;
+    background-color: var(--colorbutton);
+    border: none;
+}
+
+.content_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8rem;
+    color: #fff;
+}
+
+.content-left_title{
+    font-size: 4rem;
+}
+
+.content-right_horario{
+    position: absolute;
+    height: 9rem;
+    padding: 1rem 2rem 9rem 1rem;
+    margin-top: 5rem;
+    margin-right: 20rem;
+    background: var(--colorfondohorary);
+    border-radius: 10px;
+    color: black;
+    transition: all 300ms ease-in-out;
+    animation-name: Horario;
+    animation-duration: 2s;
+}
+
+@keyframes Horario {
+    0%{      
+        opacity: 0;
+    }
+
+    50%{      
+        opacity: 0.5s;
+    }
+
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+
+.horario_title{
+    margin-left: 2rem;
+    font-style: 4rem;
+    font-weight: 900;
+}
+
+.horario_title::before{
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: #008e13;
+    border-radius: 50px;
+    left: 13px;
+    top: 18px;
+}
+
+.horario_days{
+    color: gray;
+}
+
+.horario_hour{
+    color: black;
+    font-weight: 500;
+}
+
+.horario_hour-1{
+    margin-left: 1.5rem
+}
+
+.horario_hour-close{
+    margin-left: 7rem;
+}
+
+.content-right_img{
+    width: 87rem;
+    position: relative;
+    right: -27rem;
+    bottom: -15rem;
+    transition: all 300ms ease-in-out;
+    animation-name: BMW;
+    animation-duration: 1.8s;
+}
+
+@keyframes BMW {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    
+}
+</style>

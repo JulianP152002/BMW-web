@@ -1,0 +1,71 @@
+<section class="container_navbar">
+
+        
+    <nav class="navbar_left">
+
+        <div class="menu_logo">
+            <img src="/src/icons/imgs/Bmw.png" alt="">
+        </div>
+        
+        <ul class="menu_list">
+            <li class="menu_link">
+                <a href="index.php">Home</a>
+            </li>
+
+            <li class="menu_link">
+                <a href="index.php">Nuestros modelos</a>
+            </li>
+
+            <li class="menu_link">
+                <a href="index.php">Electricos</a>
+            </li>
+
+            <li class="menu_link">
+                <a href="index.php">Encuentranos</a>
+            </li>
+
+        </ul>
+
+    </nav>
+    
+</section>
+
+<style>
+
+.menu_logo{
+    max-width: 80px;
+    display: flex;
+}
+
+
+
+.navbar_left{
+    margin-left: 4rem;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu_list,
+.menu_left{
+    display: flex;
+    padding: 1rem;
+}
+
+.menu_link,
+.menu_login,
+.menu_search{
+    padding: 0 1rem;
+    transition: all 350ms ease-in-out;
+}
+
+.menu_link:hover,
+.menu_login:hover,
+.menu_search:hover{
+    color: var(--colorPrimar);
+}
+
+
+</style>
