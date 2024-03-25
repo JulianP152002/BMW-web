@@ -90,30 +90,43 @@ img, video,picture,iframe, figure{
     display: block;
 }
 
-form, input, selec, textarea, button, label{
+form, input, select, textarea, button, label{
     display: block;
     font-family: inherit;
     font-size: inherit;
     color: inherit;
 }
-body::-webkit-scrollbar{
-    width: 15px;
-
+body::-webkit-scrollbar {
+    width: 10px;     
+    height: 5px;
+    border: transparent;
+    background-color: transparent;
+    color: transparent;
 }
 
-body::-webkit-scrollbar-thumb{
-    border: 5px solid transparent;
-    box-shadow: none;
-    border-radius: 40px;   
+body::-webkit-scrollbar-thumb {
+    background: #a4a4a4;
+    border-radius: 4px;
 }
 
-body:hover::-webkit-scrollbar-thumb{
-    box-shadow: inset 0 0 0 10px #424242;
-}
-body:hover::-webkit-scrollbar-thumb:hover{
-    border:  8px solid transparent;
-    box-shadow: inset 0 0 0 10px #0b0b0b;
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #8f8f8f;
 }
 
+body::-webkit-scrollbar-thumb:active {
+    background-color: #7b7b7b;
+}
+
+body::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
 
 </style>
