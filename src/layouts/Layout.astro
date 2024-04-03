@@ -1,4 +1,5 @@
 ---
+import '@fontsource-variable/urbanist';
 interface Props {
 	title: string;
 }
@@ -7,13 +8,13 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Sitio Web de concesionario BMW, donde encontraras los mejores vehiculos del mundo" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/src/icons/imgs/Bmw.png" />
+        <link rel="stylesheet" href="/src/icons/fonts/fontawesome-free-6.1.2-web/css/all.css">
 		<title>{title}</title>
 	</head>
 	<body>
@@ -21,31 +22,111 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+
+html {
+	font-family: 'Urbanist Variable', sans-serif;;
+	background: #fff;
+    scroll-behavior: smooth;
+    font-size: 10px;
+    overflow-x: hidden; 
+	text-rendering: optimizeSpeed;
+}
+:root{
+    --colorPrimar: #3189B6;
+    --colorbutton: #ffb004;
+    --colorfondohorary: #fff;
+    --color_description: #565656;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+	font-size: 1.6rem;
+    font-weight: 400; 
+    line-height: 1.5;
+}	
+
+*{
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+*,
+*::after,
+*::after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    
+}
+
+body{
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+p a{
+    display: inline;
+}
+
+img, video,picture,iframe, figure{
+    max-width: 100%;
+    display: block;
+}
+
+form, input, select, textarea, button, label{
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+body::-webkit-scrollbar {
+    width: 10px;     
+    height: 5px;
+    border: transparent;
+    background-color: transparent;
+    color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #a4a4a4;
+    border-radius: 4px;
+}
+
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #8f8f8f;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: #7b7b7b;
+}
+
+body::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
 </style>
