@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "proyectobmw-web",
-=======
   "name": "bmw-web",
->>>>>>> 094fe5a92e963b26920263271b28c5df6ed70e36
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -14,17 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "astro": "^4.5.8",
-    "@astrojs/check": "^0.5.9",
-    "typescript": "^5.4.3"
-  }
-}
-=======
     "@astrojs/check": "^0.5.9",
     "@fontsource-variable/urbanist": "^5.0.20",
     "astro": "^4.5.8",
     "typescript": "^5.4.3"
   }
 }
->>>>>>> 094fe5a92e963b26920263271b28c5df6ed70e36

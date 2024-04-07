@@ -3,31 +3,31 @@ export const CARSM = [
         id: "M3COMPETITON",
         name: "BMW COMPETITION 2024",
         fuel: "Gasolina",
-        precie: "150'000.000",
+        precie: "150'000.000"
     },
     {
         id: "M440iCoupe",
         name: "BMW M440i Coupe 2024",
         fuel: "Gasolina",
-        precie: "180'000.000",
+        precie: "180'000.000"
     },
     {
         id: "X4M40i2024",
         name: "BMW X4 M40i 2024",
         fuel: "Gasolina",
-        precie: "150'000.000",
+        precie: "150'000.000"
     },
     {
         id: "XM202",
         name: "BMW XM 2024",
         fuel: "Gasolina",
-        precie: "150'000.000",
+        precie: "150'000.000"
     },
     {
         id: "Z4M40i202",
         name: "BMW Z4 M40i 2024",
         fuel: "Gasolina",
-        precie: "150'000.000",
+        precie: "150'000.000"
     },
     {
         id: "M440ixDriveGranCoupé",
@@ -95,6 +95,6 @@ export const CARSM = [
         name: "BMW M440i Convertible",
         fuel: "Gasolina",
         precie: "xx"
-    },
+    }
 
 ];
