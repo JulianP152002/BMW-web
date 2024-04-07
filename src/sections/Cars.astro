@@ -1,160 +1,114 @@
-<section class="content_cars">
+---
+import {CARSM} from "../const/carsm"
+---
 
+<section class="content_cars">
     <h1 class="content_cars-title">Nuestros <span>Vehiculos</span></h1>
 
     <h2 class="cars_title">BMW M</h2>
     <div class="cars_cars-m">
-
-        <div class="container_cars-m">
-            <div class="cars-m_imgs">
-                <img class="cars-m_car" src="/src/icons/imgs/M3 COMPETITON 2024.PNG" alt="">
-                <img class="cars-m_logo" src="/src/icons/imgs/logobmw.png" alt="">
-            </div>
-            <div class="cars-m_description">
-                <h3 class="cars-m_title">BMW COMPETITION 2024</h3>
-                <p class="cars-m_fuel">Gasolina</p>
-                <p class="cars-m_precie">Desde $168.000</p>
-            </div>
-
-        </div>
-
-        
-        <div class="container_cars-m">
-            <div class="cars-m_imgs">
-                <img class="cars-m_car" src="/src/icons/imgs/M440i Coupe 2024.png" alt="">
-                <img class="cars-m_logo" src="/src/icons/imgs/logobmw.png" alt="">
-            </div>
-            <div class="cars-m_description">
-                <h3 class="cars-m_title">BMW M440i Coupe 2024</h3>
-                <p class="cars-m_fuel">Gasolina</p>
-                <p class="cars-m_precie">Desde $168.000</p>
-            </div>
-
-        </div>
-
-        
-        <div class="container_cars-m">
-            <div class="cars-m_imgs">
-                <img class="cars-m_car" src="/src/icons/imgs/X4 M40i 2024.png" alt="">
-                <img class="cars-m_logo" src="/src/icons/imgs/logobmw.png" alt="">
-            </div>
-            <div class="cars-m_description">
-                <h3 class="cars-m_title">BMW X4 M40i 2024</h3>
-                <p class="cars-m_fuel">Gasolina</p>
-                <p class="cars-m_precie">Desde $168.000</p>
-            </div>
-
-        </div>
-
-        
-        <div class="container_cars-m">
-            <div class="cars-m_imgs">
-                <img class="cars-m_car" src="/src/icons/imgs/XM 202.png" alt="">
-                <img class="cars-m_logo" src="/src/icons/imgs/logobmw.png" alt="">
-            </div>
-            <div class="cars-m_description">
-                <h3 class="cars-m_title">BMW XM 2024</h3>
-                <p class="cars-m_fuel">Gasolina</p>
-                <p class="cars-m_precie">Desde $168.000</p>
-            </div>
-
-        </div>
-
-        <div class="container_cars-m">
-            <div class="cars-m_imgs">
-                <img class="cars-m_car" src="/src/icons/imgs/Z4 M40i 202.png" alt="">
-                <img class="cars-m_logo" src="/src/icons/imgs/logobmw.png" alt="">
-            </div>
-            <div class="cars-m_description">
-                <h3 class="cars-m_title">BMW Z4 M40i 2024</h3>
-                <p class="cars-m_fuel">Gasolina</p>
-                <p class="cars-m_precie">Desde $168.000</p>
-            </div>
-
-        </div>
+        {
+            CARSM.map(({ id, name, fuel, precie }) => (
+                <div class="container_cars-m">
+                    <div class="cars-m_imgs">
+                        <img
+                            loading="lazy"
+                            class="cars-m_car"
+                            src={`/src/icons/imgs/${id}.WebP`}
+                            alt={`Imagen del vehiculo ${name}`}
+                        />
+                        <img
+                            loading="lazy"
+                            class="cars-m_logo"
+                            src="/src/icons/imgs/logobmw.WebP"
+                            alt={`Imagen del vehiculo ${name}`}
+                        />
+                    </div>
+                    <div class="cars-m_description">
+                        <h3 class="cars-m_title">{name}</h3>
+                        <p class="cars-m_fuel">{fuel}</p>
+                        <p class="cars-m_precie">${precie}</p>
+                    </div>
+                </div>
+            ))
+        }
     </div>
 
-
-    <hr>
+    <hr />
 </section>
 
 <style>
+    .content_cars {
+        margin-top: 5rem;
+        width: 95%;
+        height: auto;
+        margin: auto;
+        margin-left: 5rem;
+    }
+    .content_cars-title {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        font-size: 3rem;
+        font-weight: 500;
+    }
 
-.content_cars{
-    margin-top: 5rem;
-    width: 95%;
-    height: auto;
-    margin: auto;
-    margin-left: 5rem
-}
-.content_cars-title{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    font-size: 3rem;
-    font-weight: 500;
-}
+    .content_cars-title span {
+        color: var(--colorPrimar);
+    }
 
-.content_cars-title span{
-    color: var(--colorPrimar);
-}
+    .cars_title {
+        display: flex;
+        color: #3c3c3c;
+        font-weight: 200;
+    }
 
-.cars_title{
-    display: flex;
-    color: #3c3c3c;
-    font-weight: 200;
-}
+    .cars_cars-m {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        transition: all 300ms ease-in-out;
+        cursor: pointer;
+    }
 
-.cars_cars-m{
-    
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    transition: all 300ms ease-in-out;
-    cursor: pointer;
-}
+    .container_cars-m:hover img {
+        transform: scale(1.2);
+    }
+    .container_cars-m {
+        max-width: 100%;
+        max-height: 100%;
+    }
 
-.container_cars-m:hover img {
-    transform: scale(1.2);
-}
-.container_cars-m{
-    max-width: 100%;
-    max-height: 100%;
-}
+    .cars-m_description {
+        margin-top: 1rem;
+    }
 
-.cars-m_description{
-    margin-top: 1rem;
-}
+    .cars-m_title {
+        margin-top: 0.5rem;
+        font-weight: 500;
+        color: black;
+    }
 
-.cars-m_title{
-    margin-top: 0.5rem;
-    font-weight: 500;
-    color: black;
-}
+    .cars-m_fuel {
+        color: #2e2e2e;
+        font-size: 1.9rem;
+        font-weight: 600;
+    }
 
-.cars-m_fuel{
-    color: #2e2e2e;
-    font-size: 1.9rem;
-    font-weight: 600;
-}
+    .cars-m_precie {
+        font-size: 2rem;
+        color: #4d4d4d;
+        font-weight: 100;
+    }
 
-.cars-m_precie{
-    font-size: 2rem;
-    color: #4d4d4d;
-    font-weight: 100;
-    
-}
-
-
-
-.cars-m_logo{
-    max-width: 5rem;
-    max-height: 2rem;
-}
-.cars-m_car{
-    transition: all 300ms ease-in-out;
-}
-
+    .cars-m_logo {
+        max-width: 5rem;
+        max-height: 2rem;
+    }
+    .cars-m_car {
+        transition: all 300ms ease-in-out;
+    }
 </style>
+../const/carsm
